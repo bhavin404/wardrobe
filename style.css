@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+section{
+    width: 100%;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+/* topblack startes here */
+.topblack{
+    position: sticky;
+    top:0;
+    z-index: 11111;
+    width: 100%;
+    background-color:#1E1B18;
+    padding:3px 0;
+}
+.topblack ul {
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -4%;
+}
+.topblack ul li {
+    list-style: none;
+    padding:0 10px;
+
+}
+
+.topblack ul li a {
+    font-size: 11px;
+    text-decoration: none;
+    color:#C0B394;
+    font-weight: 500;
+}
+
+/* .topblack endshere */
+
+/* nav starts here */
+nav{
+    position: sticky;
+    top: 25px;
+    z-index: 11111;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    background-color: #25211E;
+    color:#C0B394;
+}
+h1{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.img{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* color:#fff; */
+    /* border: 2px solid green; */
+    margin-left: 40px;
+}   
+
+img{
+    display: flex;
+    justify-self: end;
+    height: 20px;
+    width: 20px;
+    margin-left:50px;
+    fill:#C0B394;
+    color:#C0B394;
+
+}
+nav ul {
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav ul li{
+    position: relative;
+    text-decoration: none;
+    padding:0 10px;
+    color:#C0B394;;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+nav ul li::before{
+    content: '';
+    border-radius:10px;
+    position: absolute;
+    bottom:2px;
+    width:0%;
+    height: 5px;
+    background-color: #B8AB8E;
+}
+
+nav ul li:hover::before{
+    width:30px;
+    left:25%;
+}
+
+/* nav ends here */
+
+/* slider starts here */
+.slider{
+overflow: hidden;
+}
+.slider .image{
+    display: flex;
+    position: relative;
+    height: 390px;
+    width: 500%;
+    animation:slider 15s infinite;
+
+}
+.slider img{
+    margin: 0;
+    width: 20%;
+    height: 390px;
+    padding:0 20px;
+}
+
+@keyframes slider{
+    0%{
+       left:0; 
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-400%;
+    }
+}
+
+
+/* content starts here */
+
+.content{
+    width: 100%;
+    /* border: 2px solid black; */
+    padding:100px 200px 0 200px;
+}
+
+.maincontent{
+    position: relative;
+
+    display: flex;
+    /* border:2px solid red; */
+    width:100%;
+}
+.imgcontent img{
+    margin-left: 0;
+    width: 520px;
+    height: 320px;
+    border-radius:8px;
+}
+.writtencontent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border:2px solid green; */
+    padding:0 30px;
+}
+
+h2{
+    font-family: 'Arapey';
+    color:#065534;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 31px;
+    src: local('Arapey Regular'), local('Arapey-Regular'), url(http://themes.googleusercontent.com/static/fonts/arapey/v2/70NHEhnB-ZlzsDpQLtboKA.ttf) format('truetype');
+}
+p{
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+button{
+    max-height: fit-content;
+    max-width: fit-content;
+    font-family: 'Arapey';
+    font-size: 17px;
+    font-style: normal;
+    line-height: 22px;
+    src: local('Arapey Regular'), local('Arapey-Regular'), url(http://themes.googleusercontent.com/static/fonts/arapey/v2/70NHEhnB-ZlzsDpQLtboKA.ttf) format('truetype');
+    padding:15px 40px;
+    border-radius: 50px;
+    border:none;
+    background-color:#0D5435 ;
+    color:#fff;
+}
+
+.imgslider{
+    /* position: relative; */
+
+    overflow: hidden;
+    padding:20px 0 0px 0px;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+    /* box-shadow: inset -30px 0 40px black; */
+    z-index:111;
+}
+.shadow{
+    /* position: absolute; */
+    display:flex;
+    width: 100%;
+    height: 100%;
+    /* border: 5px solid red; */
+    z-index: 1111;
+    /* box-shadow: inset 30px 0 40px black; */
+}
+
+.imgslider .images{
+
+    height: 325px;
+    /* border: 2px solid yellow; */
+    margin-right: 10px;
+}
+.imgslider img{
+    margin-left:0;
+    height: 220px;
+    width:160px;
+    border-radius: 8px;
+}
+
+.images p{
+    font-size: 13px;
+    color:#21201d;
+    line-height: 18px;
+}
+.images span{
+    /* border: 2px solid black; */
+    color:#0d5435;
+    font-style:bold;
+    font-weight: 900;
+}
+
+/* content ends here */
+
+footer{
+    
+    display: flex;
+    justify-content: center;
+    background-color: #F2F2F2;
+    width: 100%;
+    padding:50px 0;
+}
+footer p{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+footer p.thirteen{
+    font-size: 13px;
+    color:#21201d;
+}
+.contact{
+    width:40%;
+ /* border: 2px solid black; */
+}
+
+.contactimage{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+
+}
+.contactimage img{
+    margin-left:20px;
+    /* border: 2px solid black; */
+    margin-right: 9px;
+    margin-top: 10px;
+}
+
+.contact hr{
+    color: #EFEEE8;
+    width:60%;
+    margin-left: 20%;
+}
+
+.footer2{
+    display: flex;
+    justify-content: center;
+    background-color:#25211D;
+    width: 100%;
+    border: 2px solid black;
+    padding:20px 0;
+}
+.footcontent{
+    width: 90%;
+    /* border: 2px solid white; */
+}
+
+.footcontent p,h2{
+    text-align: center;
+    color:#AA9E84;
+}
+.footcontent p.rights{
+        margin-top: 10px;
+    font-size: 10px;
+}
+.footcontent h2{
+    color:#4A4540;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.footcontent img{
+    margin:auto;
+    height: 20px;
+    width: 80px;
+    /* border: 1px solid white; */
+}
+.footcontent hr{
+    background-color:rgba(170, 158, 132, 0.397) ;
+    width: 30%;
+    height: 1px;
+    border: none;
+    margin: auto;
+}
+
+.footcontent p.colorchange{
+    color:#36322D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
